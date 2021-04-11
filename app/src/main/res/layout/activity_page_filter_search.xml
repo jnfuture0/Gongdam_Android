@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PageFilterSearch">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/filter_search_dont_use"
+        android:background="#001023"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gongdam_filter"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/nanumsquare_eb"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/filter_search_page_refresh_btn"
+            android:layout_width="20dp"
+            android:layout_height="24dp"
+            android:background="@drawable/refresh_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/filter_search_dont_use"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--검색에 적용할 항목을 @@@@-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_1"
+                android:textSize="19.5sp"
+                android:textColor="#6e6e6e"
+                android:fontFamily="@font/nanumsquare_b"
+                android:layout_marginTop="29dp"
+                android:layout_marginLeft="21dp"/>
+
+            <!--지역 레이아웃-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_radius5_stroke717171_solid_fff"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/filter_search_page_location_layout_btn"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--지역-->
+                    <TextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/location"
+                        android:textSize="19.5sp"
+                        android:textColor="#000"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginBottom="11dp"
+                        android:fontFamily="@font/nanumsquare_b"
+                        android:layout_marginLeft="11dp"/>
+                    <!-- 자세히 버튼 -->
+                    <ImageView
+                        android:id="@+id/filter_search_page_location_plus_minus_imageview"
+                        android:layout_width="14dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="17dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/plus_icon_detail"
+                        android:background="@android:color/transparent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/filter_search_page_location_recyclerView_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/filter_search_page_location_layout_btn"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/filter_search_page_location_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        app:layout_constraintTop_toBottomOf="@id/filter_search_page_location_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!--공간유형 작은 레이아웃-->
+            <!--<androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/filter_search_page_place_type_small_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_radius5_stroke717171_solid_fff"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+                &lt;!&ndash;공간유형&ndash;&gt;
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/place_type"
+                    android:textSize="19.5sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:fontFamily="@font/nanumsquare_b"
+                    android:layout_marginLeft="11dp"/>
+                &lt;!&ndash; -표시 &ndash;&gt;
+                <ImageButton
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:scaleType="centerInside"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="17dp"
+                    android:src="@drawable/plus_icon_detail"
+                    android:background="@android:color/transparent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+            <!--촬영 종류 작은 레이아웃-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_radius5_stroke717171_solid_fff"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/filter_search_page_pic_type_layout_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--촬영 종류-->
+                    <TextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/picture_type"
+                        android:textSize="19.5sp"
+                        android:textColor="#000"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginBottom="11dp"
+                        android:fontFamily="@font/nanumsquare_b"
+                        android:layout_marginLeft="11dp"/>
+
+                    <!-- 자세히 버튼 -->
+                    <ImageView
+                        android:id="@+id/filter_search_page_pic_type_plus_minus_imageview"
+                        android:layout_width="14dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="17dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/plus_icon_detail"
+                        android:background="@android:color/transparent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/filter_search_page_pic_type_recyclerView_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/filter_search_page_pic_type_layout_btn"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/filter_search_page_pic_type_recyclerView"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginRight="28dp">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        app:layout_constraintTop_toBottomOf="@id/filter_search_page_pic_type_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--시설 작은 레이아웃-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_radius5_stroke717171_solid_fff"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filter_search_page_facilities_layout_btn"
+                    android:clickable="true"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--시설-->
+                    <TextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/facilities"
+                        android:textSize="19.5sp"
+                        android:textColor="#000"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginBottom="11dp"
+                        android:fontFamily="@font/nanumsquare_b"
+                        android:layout_marginLeft="11dp"/>
+                    <!-- 자세히 버튼 -->
+                    <ImageView
+                        android:id="@+id/filter_search_page_facilities_plus_minus_imageview"
+                        android:layout_width="14dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="17dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/plus_icon_detail"
+                        android:background="@android:color/transparent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/filter_search_page_facilities_recyclerView_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/filter_search_page_facilities_layout_btn"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/filter_search_page_facilities_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginRight="28dp">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        app:layout_constraintTop_toBottomOf="@id/filter_search_page_facilities_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--분위기 작은 레이아웃-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_radius5_stroke717171_solid_fff"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filter_search_page_mood_layout_btn"
+                    android:clickable="true"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--분위기-->
+                    <TextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mood"
+                        android:textSize="19.5sp"
+                        android:textColor="#000"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginBottom="11dp"
+                        android:fontFamily="@font/nanumsquare_b"
+                        android:layout_marginLeft="11dp"/>
+                    <!-- 자세히 버튼 -->
+                    <ImageView
+                        android:id="@+id/filter_search_page_mood_plus_minus_imageview"
+                        android:layout_width="14dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="17dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/plus_icon_detail"
+                        android:background="@android:color/transparent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/filter_search_page_mood_recyclerView_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/filter_search_page_mood_layout_btn"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/filter_search_page_mood_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginRight="28dp">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        app:layout_constraintTop_toBottomOf="@id/filter_search_page_mood_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--키워드 작은 레이아웃-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_radius5_stroke717171_solid_fff"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:id="@+id/filter_search_page_keyword_layout_btn"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--키워드-->
+                    <TextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/keyword"
+                        android:textSize="19.5sp"
+                        android:textColor="#000"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginBottom="11dp"
+                        android:fontFamily="@font/nanumsquare_b"
+                        android:layout_marginLeft="11dp"/>
+                    <!-- 자세히 버튼 -->
+                    <ImageView
+                        android:id="@+id/filter_search_page_keyword_plus_minus_imageview"
+                        android:layout_width="14dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="17dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/plus_icon_detail"
+                        android:background="@android:color/transparent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/filter_search_page_keyword_recyclerView_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/filter_search_page_keyword_layout_btn"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/filter_search_page_keyword_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginRight="28dp">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        app:layout_constraintTop_toBottomOf="@id/filter_search_page_keyword_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/filter_search_apply_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#434343"
+        android:textColor="#fff"
+        android:text="@string/apply"
+        android:textSize="20sp"
+        android:fontFamily="@font/nanumsquare_b"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

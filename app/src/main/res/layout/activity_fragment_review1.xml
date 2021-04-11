@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FragmentReviewShow1_All">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingBottom="12dp"
+        android:background="@drawable/style_bottom_bababa_1dp_solid_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RatingBar
+            android:id="@+id/review1_show_page_rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:numStars="5"
+            android:stepSize="0.5"
+            style="@style/customRatingBar"
+            android:isIndicator="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/review1_show_page_dont_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/review1_show_page_rating"
+            app:layout_constraintLeft_toLeftOf="@id/review1_show_page_rating"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/rating"
+            android:textColor="#303030"
+            android:textSize="12.5sp"
+            android:fontFamily="@font/nanumsquare_r"/>
+
+        <TextView
+            android:id="@+id/review1_show_page_rating_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/review1_show_page_dont_use"
+            app:layout_constraintBottom_toBottomOf="@id/review1_show_page_dont_use"
+            android:layout_marginLeft="15dp"
+            android:text="4.5"
+            android:textColor="#303030"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanumsquare_b"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/review1_show_page_recent_first_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/recent_first"
+                android:textColor="#303030"
+                android:textSize="12.5sp"
+                android:fontFamily="@font/nanumsquare_r"/>
+
+            <TextView
+                android:id="@+id/review1_show_page_rating_first_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/rating_first"
+                android:textColor="#8d8d8d"
+                android:textSize="12.5sp"
+                android:fontFamily="@font/nanumsquare_r"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/review1_show_page_recycler_view"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp"/>
+
+</LinearLayout>

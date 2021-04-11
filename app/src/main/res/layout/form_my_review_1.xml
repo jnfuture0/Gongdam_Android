@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/style_bottom_bababa_1dp_solid_transparent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/form_my_review_image"
+            android:background="@drawable/test_image"
+            android:scaleType="centerCrop"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/form_my_review_studio_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A studio"
+            android:textColor="#303030"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanumsquare_b"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/form_my_review_image"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/form_my_review_room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나 room"
+            android:textColor="#303030"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanumsquare_r"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/form_my_review_studio_name"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:id="@+id/form_my_review_dont_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_review1_2"
+            android:textColor="#7e7e7e"
+            android:textSize="12sp"
+            android:fontFamily="@font/nanumsquare_r"
+            app:layout_constraintTop_toBottomOf="@id/form_my_review_studio_name"
+            app:layout_constraintLeft_toRightOf="@id/form_my_review_image"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/form_my_review_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19.08.05"
+            android:textColor="#7e7e7e"
+            android:textSize="12sp"
+            android:fontFamily="@font/nanumsquare_r"
+            app:layout_constraintTop_toBottomOf="@id/form_my_review_studio_name"
+            app:layout_constraintLeft_toRightOf="@id/form_my_review_dont_use"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/form_my_review_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00~16:00"
+            android:textColor="#7e7e7e"
+            android:textSize="12sp"
+            android:fontFamily="@font/nanumsquare_r"
+            app:layout_constraintTop_toBottomOf="@id/form_my_review_dont_use"
+            app:layout_constraintLeft_toRightOf="@id/form_my_review_image"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/form_my_review_write_btn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/my_review1_write_review"
+            android:textColor="#fff"
+            android:textSize="14.5sp"
+            android:fontFamily="@font/nanumsquare_r"
+            android:background="#001023"
+            app:layout_constraintTop_toBottomOf="@id/form_my_review_image"
+            android:layout_marginTop="11dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

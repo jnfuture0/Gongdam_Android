@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PageReviewShow">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/review_show_page_layout_title"
+        android:background="#001023"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+            android:id="@+id/review_show_page_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/review_show"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/nanumsquare_eb"
+            android:gravity="center"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/review_show_page_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/style_bottom_bababa_1dp_solid_fff"
+        android:elevation="0dp"
+        android:theme="@style/TabTheme2">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout_review_show_page"
+            app:tabIndicatorColor="#001023"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpReviewShow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

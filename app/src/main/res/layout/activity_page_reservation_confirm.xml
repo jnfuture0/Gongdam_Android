@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PageReservationConfirm">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reservation_confirm_page_layout_title"
+        android:background="#001023"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/reservation_confirm"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/nanumsquare_eb"
+            android:gravity="center"/>
+
+        <!--<ImageButton
+            android:id="@+id/reservation_confirm_page_ring_btn"
+            android:layout_width="20dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ring"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="20dp"/>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/reservation_confirm_page_appbar"
+        app:layout_constraintTop_toBottomOf="@id/reservation_confirm_page_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/style_bottom_bababa_1dp_solid_fff"
+        android:elevation="0dp"
+        android:theme="@style/TabTheme2">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout_reservation_confirm_page"
+            app:tabIndicatorColor="#001023"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_reservation_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

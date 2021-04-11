@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/form_home_with_discount_layout"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:id="@+id/form_home_with_discount_image"
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/test_image"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/form_home_with_discount_dont_use"
+        android:layout_width="29dp"
+        android:layout_height="31dp"
+        android:background="@drawable/sale_icon"
+        app:layout_constraintTop_toTopOf="@id/form_home_with_discount_image"
+        app:layout_constraintRight_toRightOf="@id/form_home_with_discount_image"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="7dp"/>
+    <!--30% 세일 텍스트 레이아웃-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@id/form_home_with_discount_dont_use"
+        app:layout_constraintBottom_toBottomOf="@id/form_home_with_discount_dont_use"
+        app:layout_constraintLeft_toLeftOf="@id/form_home_with_discount_dont_use"
+        app:layout_constraintRight_toRightOf="@id/form_home_with_discount_dont_use">
+
+        <TextView
+            android:id="@+id/form_home_with_discount_how_much_discount_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textSize="9sp"
+            android:textColor="#fff"
+            android:fontFamily="@font/nanumsquare_eb"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="8sp"
+            android:textColor="#fff"
+            android:fontFamily="@font/nanumsquare_b"/>
+
+    </LinearLayout>
+    <!--sale_studio_name-->
+    <TextView
+        android:id="@+id/form_home_with_discount_studio_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#303030"
+        android:text="A studio"
+        android:fontFamily="@font/nanumgothicextrabold"
+        app:layout_constraintTop_toBottomOf="@id/form_home_with_discount_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="5dp" />
+    <!--sale_room_name-->
+    <TextView
+        android:id="@+id/form_home_with_discount_room_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#303030"
+        android:text="A studio"
+        android:fontFamily="@font/nanumsquare_r"
+        app:layout_constraintTop_toBottomOf="@id/form_home_with_discount_studio_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="2dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

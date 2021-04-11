@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#bfbfbf</color>
+    <color name="colorPrimaryDark">#434343</color>
+    <color name="colorAccent">#001023</color>
+
+    <color name="pink">#FF4081</color>
+    <color name="enableButton">#0E637E</color>
+    <color name="disableButton">#A7A27F</color>
+    <color name="black">#444444</color>
+    <color name="gray">#D5D5D5</color>
+    <color name="white">#ffffff</color>
+
+    <color name="filter_black">#000</color>
+    <color name="filter_white">#fff</color>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.gongdam">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key"/>
+
+        <activity android:name=".PagePayResult"></activity>
+        <activity android:name=".JustInfo" />
+        <activity android:name=".Intro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Payment.Payment" />
+        <activity android:name=".Test">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="test"
+                    android:scheme="gongdamapptest" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".JustInfo3" />
+        <activity android:name=".JustInfo2" />
+        <activity android:name=".PageReservation2" />
+        <activity android:name=".PageReservation" />
+        <activity android:name=".PageMyReviewEdit" />
+        <activity android:name=".PageSignUp" />
+        <activity android:name=".PageReviewShow" />
+        <activity android:name=".PageFilterPromotion" />
+        <activity android:name=".PageMySpace" />
+        <activity android:name=".PageStudio" />
+        <activity android:name=".PagePromotion" />
+        <activity android:name=".Fragment.FragmentPromotion" />
+        <activity android:name=".PageRoomEquipment" />
+        <activity android:name=".PageRoom" />
+        <activity android:name=".PageMyReviewWrite" />
+        <activity android:name=".Fragment.FragmentMyReview2_WrittenReview" />
+        <activity android:name=".Fragment.FragmentMyReview1_WritableReview" />
+        <activity android:name=".PageMyReview" />
+        <activity android:name=".PageFilterSearch" />
+        <activity android:name=".PageReservationConfirm" />
+        <activity android:name=".Fragment.FragmentCenter2_1by1Question" />
+        <activity android:name=".Fragment.FragmentCenter" />
+        <activity android:name=".PageUserInfo" />
+        <activity android:name=".Fragment.FragmentHome" />
+        <activity android:name=".PageFindPassword" />
+        <activity android:name=".PageLoginActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="action"
+                    android:scheme="gongdamapp" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

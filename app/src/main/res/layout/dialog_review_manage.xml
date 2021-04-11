@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#9f9f9f"
+    android:paddingBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="19.5sp"
+        android:text="@string/review_manage"
+        android:fontFamily="@font/nanumsquare_b"
+        android:textColor="#000"/>
+    <Button
+        android:id="@+id/dialog_review_manage_editBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/style_button_rad10_434343_to_232323"
+        android:textColor="#fff"
+        android:text="@string/review_edit"
+        android:textSize="17sp"
+        android:fontFamily="@font/nanumsquare_b"/>
+    <Button
+        android:id="@+id/dialog_review_manage_deleteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/style_button_rad10_434343_to_232323"
+        android:textColor="#fff"
+        android:text="@string/review_delete"
+        android:textSize="17sp"
+        android:fontFamily="@font/nanumsquare_b"/>
+    <Button
+        android:id="@+id/dialog_review_manage_cancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/style_button_rad10_bfbfbf_to_aaaaaa"
+        android:textColor="#fff"
+        android:text="@string/cancel_in_english"
+        android:textSize="17sp"
+        android:fontFamily="@font/nanumsquare_b"/>
+
+</LinearLayout>

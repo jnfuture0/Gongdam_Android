@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PageRoomEquipment">
+    <!--보유장비 타이틀 레이아웃-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/room_page_title_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#001023"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:id="@+id/room_equipment_page_room_name_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/have_equipment"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/nanumsquare_eb"
+            android:gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/style_bottom_bababa_1dp_solid_fff"
+        style="?android:attr/borderlessButtonStyle"
+        android:paddingBottom="1dp"
+        android:theme="@style/TabTheme">
+
+        <!--app:tabTextAppearance="@style/tab_text"-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/room_equipment_page_tabLayout"
+            app:tabGravity="center"
+            app:tabIndicatorColor="#303030"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!--"상세정보"-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/detail_content"
+        android:textColor="#303030"
+        android:textSize="19.5sp"
+        android:fontFamily="@font/nanumsquare_b"/>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/room_equipment_page_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="31dp"/>
+
+
+
+</LinearLayout>

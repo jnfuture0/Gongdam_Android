@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PageUserInfo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userInfo_page_layout_title"
+        android:background="#001023"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/user_info"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/nanumsquare_eb"
+            android:gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/userInfo_page_user_image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/human"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userInfo_page_layout_title"
+        android:layout_marginTop="45dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userInfo_page_user_image"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/userInfo_page_email_textView"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            app:fontFamily="@font/nanumgothic"
+            android:text="test@test.com"
+            android:textSize="13.5sp"
+            android:textColor="#777777"
+            android:gravity="center_vertical"
+            android:background="@drawable/style_borders_b5b5b5_color_eeeeee"
+            android:layout_marginTop="60dp"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userInfo_page_user_image"/>
+
+        <EditText
+            android:id="@+id/userInfo_page_origin_pwET"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:hint="@string/origin_pw"
+            android:textColor="#777777"
+            android:textSize="13.5sp"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            app:fontFamily="@font/nanumgothic"
+            android:gravity="center_vertical"
+            android:background="@drawable/style_borders_b5b5b5_13"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userInfo_page_email_textView"/>
+
+        <EditText
+            android:id="@+id/userInfo_page_pwET"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:hint="@string/new_pwd"
+            android:textColor="#777777"
+            android:textSize="13.5sp"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            app:fontFamily="@font/nanumgothic"
+            android:gravity="center_vertical"
+            android:background="@drawable/style_borders_b5b5b5_13"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userInfo_page_email_textView"/>
+
+        <EditText
+            android:id="@+id/userInfo_page_pwET2"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:hint="@string/pwd_confirm"
+            android:textColor="#777777"
+            android:textSize="13.5sp"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            app:fontFamily="@font/nanumgothic"
+            android:gravity="center_vertical"
+            android:background="@drawable/style_borders_b5b5b5_13"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userInfo_page_pwET"/>
+
+        <EditText
+            android:id="@+id/userInfo_page_nicknameET"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:hint="@string/nickname"
+            app:fontFamily="@font/nanumgothic"
+            android:textSize="13.5sp"
+            android:textColor="#777777"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            android:background="@drawable/style_borders_b5b5b5_13"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userInfo_page_pwET2"/>
+
+
+        <!--<TextView
+            android:id="@+id/userInfo_page_phoneTV"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            app:fontFamily="@font/nanumgothic"
+            android:text="010-4876-2554"
+            android:textSize="13.5sp"
+            android:textColor="#777777"
+            android:gravity="center_vertical"
+            android:background="@drawable/style_borders_b5b5b5_color_eeeeee"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userInfo_page_nicknameET"/>-->
+
+
+        <Button
+            android:id="@+id/userInfo_page_confirm_btn"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#fff"
+            android:text="@string/edit"
+            app:fontFamily="@font/nanumgothicbold"
+            android:textSize="16sp"
+            android:background="@drawable/style_button_rad10_bfbfbf_to_aaaaaa"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userInfo_page_nicknameET"/>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

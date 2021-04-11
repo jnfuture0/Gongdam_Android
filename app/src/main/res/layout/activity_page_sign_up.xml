@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PageSignUp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sign_up_page_layout_title"
+        android:background="#001023"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/nanumsquare_eb"
+            android:gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sign_up_page_layout_dont_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_page_layout_title">
+
+        <EditText
+            android:id="@+id/sign_up_page_emailET"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:hint="@string/email"
+            app:fontFamily="@font/nanumgothic"
+            android:textSize="13.5sp"
+            android:textColor="#777777"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            android:background="@drawable/style_borders_b5b5b5_13"
+            android:paddingLeft="15dp"/>
+        
+        <EditText
+            android:id="@+id/sign_up_page_nameET"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/nickname"
+            app:fontFamily="@font/nanumgothic"
+            android:textSize="13.5sp"
+            android:textColor="#777777"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            android:background="@drawable/style_borders_b5b5b5_13"
+            android:paddingLeft="15dp"/>
+        
+        <EditText
+            android:id="@+id/sign_up_page_idET"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/id"
+            app:fontFamily="@font/nanumgothic"
+            android:textSize="13.5sp"
+            android:textColor="#777777"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            android:background="@drawable/style_borders_b5b5b5_13"
+            android:paddingLeft="15dp"/>
+
+
+        <EditText
+            android:id="@+id/sign_up_page_pwET"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:hint="@string/pwd"
+            android:textColor="#777777"
+            android:textSize="13.5sp"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            app:fontFamily="@font/nanumgothic"
+            android:gravity="center_vertical"
+            android:background="@drawable/style_borders_b5b5b5_13"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/sign_up_page_pwET2"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:hint="@string/pwd_confirm"
+            android:textColor="#777777"
+            android:textSize="13.5sp"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            app:fontFamily="@font/nanumgothic"
+            android:gravity="center_vertical"
+            android:background="@drawable/style_borders_b5b5b5_13"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"/>
+
+
+        <Button
+            android:id="@+id/sign_up_page_sign_upBtn"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#fff"
+            android:text="@string/sign_up"
+            app:fontFamily="@font/nanumgothicbold"
+            android:textSize="16sp"
+            android:background="@drawable/style_button_rad10_bfbfbf_to_aaaaaa"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_page_pwET"/>
+
+        <!--개인정보 취급방침-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sign_up_page_layout_find_idpw_layout_dont_use"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_page_sign_upBtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <CheckBox
+                android:id="@+id/sign_up_page_still_sign_up_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumgothic"
+                android:textSize="11.5sp"
+                android:textColor="#000"
+                android:text="@string/you_have_to_agree"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintLeft_toRightOf="@id/sign_up_page_still_sign_up_checkBox"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="370dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="#626262"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_page_layout_dont_use"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_page_layout_dont_use"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/login_page_description1"
+        android:textColor="#000"
+        android:fontFamily="@font/nanumgothic"
+        android:textSize="14sp"/>
+
+
+    <ImageView
+        android:layout_width="63dp"
+        android:layout_height="82dp"
+        android:background="@drawable/gongdam_logo_horizon_3x"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_page_layout_dont_use"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="46dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

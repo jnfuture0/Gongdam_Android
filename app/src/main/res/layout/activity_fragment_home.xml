@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.FragmentHome">
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#001023"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/home_hamburger_btn"
+            android:layout_width="20dp"
+            android:layout_height="18dp"
+            android:background="@drawable/hamburger"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="20dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:background="@drawable/gongdam_logo_vertical"/>
+
+        <Button
+            android:id="@+id/home_ring_btn"
+            android:layout_width="20dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ring"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>--> <!--Title-->
+
+    <ScrollView
+        android:id="@+id/home_page_whole_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--이미지 슬라이더-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--이미지 뷰페이져-->
+                <androidx.viewpager.widget.ViewPager
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/home_page_image_viewPager"
+                    android:background="@drawable/style_bottom_bababa_1dp_solid_transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="261dp"/>
+                <!--이미지 수. 1/5 부분-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/home_page_image_slider_num_layout"
+                    app:layout_constraintBottom_toBottomOf="@id/home_page_image_viewPager"
+                    app:layout_constraintRight_toRightOf="@id/home_page_image_viewPager"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/style_radius10_solid_7d7d7d_opacity_70">
+                    <LinearLayout
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/home_page_image_slider_now_image_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textSize="15.5sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/nanumgothic"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/"
+                            android:textSize="15.5sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/nanumgothic"/>
+                        <TextView
+                            android:id="@+id/home_page_image_slider_whole_image_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5"
+                            android:textSize="15.5sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/nanumgothic"/>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
+
+                <!--중심축 Layout-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="43"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp">
+
+                    <!--discount Title-->
+                    <TextView
+                        android:id="@+id/home_page_discount_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gongdam_promotion"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#303030"
+                        android:textSize="19.5sp"
+                        android:fontFamily="@font/nanumsquare_b"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <!--discount recyclerView-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_page_discount_recyclerView"
+                        app:layout_constraintTop_toBottomOf="@id/home_page_discount_textView"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <!--popular Title-->
+                    <TextView
+                        android:id="@+id/home_page_popular_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/home_page_discount_recyclerView"
+                        android:text="@string/gongdam_popular"
+                        android:textColor="#303030"
+                        android:textSize="19.5sp"
+                        android:layout_marginTop="64dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/nanumsquare_b"/>
+
+                    <!--popular recyclerView-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_page_popular_recyclerView"
+                        app:layout_constraintTop_toBottomOf="@id/home_page_popular_textView"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/home_page_popular_recyclerView"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="65dp"
+                        android:orientation="vertical">
+                        <!--공담 가이드-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gongdam_guide"
+                            android:textColor="#303030"
+                            android:textSize="19.5sp"
+                            android:fontFamily="@font/nanumsquare_b"/>
+                        <!--공담 가이드 1,2번-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:orientation="horizontal">
+                            <!--공담 가이드 찾기 레이아웃-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/main_page_guide_search_btn"
+                                android:clickable="true"
+                                android:background="#315c3b"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="190dp">
+
+                                <ImageView
+                                    android:layout_width="127dp"
+                                    android:layout_height="128dp"
+                                    android:background="@drawable/main_search"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/gongdam_guide_search_1"
+                                    android:textColor="#fff"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/nanumsquare_eb"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#fff"
+                                    android:text="@string/gongdam_guide_search_2"
+                                    android:fontFamily="@font/nanumsquare_b"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <!--공담 가이드 공간등록 레이아웃-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/main_page_guide_enroll_btn"
+                                android:clickable="true"
+                                android:background="#071f3e"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="190dp">
+
+                                <ImageView
+                                    android:layout_width="127dp"
+                                    android:layout_height="128dp"
+                                    android:background="@drawable/main_enroll"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/gongdam_guide_enroll_1"
+                                    android:textColor="#fff"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/nanumsquare_eb"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#fff"
+                                    android:text="@string/gongdam_guide_enroll_2"
+                                    android:fontFamily="@font/nanumsquare_b"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <!--공담 가이드 3,4번-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <!--공담 가이드 에티켓 레이아웃-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                app:layout_constraintTop_toBottomOf="@id/main_page_guide_search_btn"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                android:id="@+id/main_page_guide_etiquette_btn"
+                                android:clickable="true"
+                                android:background="#0a75a5"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="190dp">
+
+                                <ImageView
+                                    android:layout_width="127dp"
+                                    android:layout_height="128dp"
+                                    android:background="@drawable/main_etiquette"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/gongdam_guide_etiquette_1"
+                                    android:textColor="#fff"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/nanumsquare_eb"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#fff"
+                                    android:text="@string/gongdam_guide_etiquette_2"
+                                    android:fontFamily="@font/nanumsquare_b"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <!--공담 가이드 꿀팁 레이아웃-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                app:layout_constraintTop_toBottomOf="@id/main_page_guide_search_btn"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/main_page_guide_tip_btn"
+                                android:clickable="true"
+                                android:background="#eae255"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="190dp">
+
+                                <ImageView
+                                    android:layout_width="127dp"
+                                    android:layout_height="128dp"
+                                    android:background="@drawable/main_tip"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/gongdam_guide_tip_1"
+                                    android:textColor="#303030"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/nanumsquare_eb"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#303030"
+                                    android:text="@string/gongdam_guide_tip_2"
+                                    android:fontFamily="@font/nanumsquare_b"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:layout_marginTop="60dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
+            </LinearLayout>
+
+
+            <!--하단 회사정보 레이아웃-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="#001023"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/main_page_bottom_btn_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_page_bottom_1"
+                        android:textSize="13sp"
+                        android:textColor="#fff"
+                        android:fontFamily="@font/nanumgothic"
+                        android:background="@android:color/transparent"
+                        style="?android:attr/borderlessButtonStyle"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:background="#bababa"/>
+
+                    <Button
+                        android:id="@+id/main_page_bottom_btn_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/main_page_bottom_2"
+                        android:textSize="13sp"
+                        android:textColor="#fff"
+                        android:fontFamily="@font/nanumgothic"
+                        android:background="@android:color/transparent"
+                        style="?android:attr/borderlessButtonStyle"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:background="#bababa"/>
+
+                    <Button
+                        android:id="@+id/main_page_bottom_btn_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/main_page_bottom_3"
+                        android:textSize="13sp"
+                        android:textColor="#fff"
+                        android:fontFamily="@font/nanumgothic"
+                        android:background="@android:color/transparent"
+                        style="?android:attr/borderlessButtonStyle"/>
+                </LinearLayout>
+
+                <!--짝대기-->
+                <!--<View
+                    android:layout_width="357dp"
+                    android:layout_height="1dp"
+                    android:background="#fff"
+                    android:layout_gravity="center_horizontal"/>-->
+
+                <!--공담정보-->
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.FragmentCenter1_OftenQuestion">
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+-->
+            <!--회원가입, 예약하기 버튼-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/center1_page_top_btn1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/style_border_b5b5b5_08"
+                    android:text="@string/center_page1_1"
+                    android:textColor="#303030"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nanumsquare_b"/>
+                <Button
+                    android:id="@+id/center1_page_top_btn2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/style_border_b5b5b5_08"
+                    android:text="@string/center_page1_2"
+                    android:textColor="#bfbfbf"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nanumsquare_b"/>
+            </LinearLayout>
+
+            <!--촬영하기, 기타문의 버튼-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/center1_page_top_btn3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/style_border_b5b5b5_08"
+                    android:text="@string/center_page1_3"
+                    android:textColor="#bfbfbf"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nanumsquare_b"/>
+                <Button
+                    android:id="@+id/center1_page_top_btn4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/style_border_b5b5b5_08"
+                    android:text="@string/center_page1_4"
+                    android:textColor="#bfbfbf"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nanumsquare_b"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/center_page1_5"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:fontFamily="@font/nanumsquare_r"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="34dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#303030"
+                android:layout_marginTop="13dp"/>
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/center1_vp"/>
+
+
+
+        <!--</LinearLayout>
+    </ScrollView>-->
+
+
+
+</LinearLayout>

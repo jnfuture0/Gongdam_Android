@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/form_search_board_layout"
+    android:background="#fff"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/form_search_board_image_covered_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_only_radius_10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:id="@+id/form_search_board_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/test_image"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:background="@drawable/style_only_radius_10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/form_search_board_st_r_name_loc_layout_dont_use"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/form_search_board_studio_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="APRIL studio"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="#303030"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/nanumsquare_b"/>
+
+                    <TextView
+                        android:id="@+id/form_search_board_room_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B room"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="#303030"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/nanumsquare_r"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/form_search_board_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="서울 송파구"
+                    android:textColor="#6e6e6e"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/nanumsquare_r"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/form_search_board_st_r_name_loc_layout_dont_use"
+            app:layout_constraintLeft_toLeftOf="parent">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/form_search_board_image_covered_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/form_search_board_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="content_"
+                    android:textColor="#6e6e6e"
+                    android:maxLines="2"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/nanumsquare_r"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/form_search_board_gongdam_confirmed_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/include_gongdam_confirmed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp">
+        </include>
+
+
+        <TextView
+            android:id="@+id/form_search_board_cost_per_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#303030"
+            android:textSize="15sp"
+            android:text="100"
+            android:fontFamily="@font/nanumsquare_b"
+            android:layout_marginRight="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

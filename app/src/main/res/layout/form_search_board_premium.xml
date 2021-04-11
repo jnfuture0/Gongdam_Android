@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/form_search_premium_board_layout"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/style_only_radius_10">
+        <ImageView
+            android:id="@+id/form_search_premium_board_image"
+            android:layout_width="match_parent"
+            android:layout_height="261dp"
+            android:src="@drawable/test_image"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:background="@drawable/style_only_radius_10"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/form_search_premium_board_studio_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/form_search_premium_board_image"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="10dp"
+            android:text="APRIL studio"
+            android:textColor="#303030"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanumsquare_b"/>
+
+        <TextView
+            android:id="@+id/form_search_premium_board_room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/form_search_premium_board_image"
+            app:layout_constraintLeft_toRightOf="@id/form_search_premium_board_studio_name"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="5dp"
+            android:text="B room"
+            android:textColor="#303030"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanumsquare_r"/>
+
+        <RatingBar
+            android:id="@+id/form_search_premium_board_ratingBar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/form_search_premium_board_studio_name"
+            android:numStars="5"
+            android:stepSize="0.5"
+            style="@style/customRatingBar"
+            android:isIndicator="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <!--/ 후기 (-->
+        <!--<TextView
+            android:id="@+id/form_search_premium_board_epilogue_dont_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/form_search_premium_board_ratingBar"
+            app:layout_constraintTop_toTopOf="@id/form_search_premium_board_ratingBar"
+            app:layout_constraintBottom_toBottomOf="@id/form_search_premium_board_ratingBar"
+            android:layout_marginLeft="10dp"
+            android:text="@string/search_page_epilogue_text_1"
+            android:textColor="#303030"
+            android:textSize="14sp"
+            android:fontFamily="@font/nanumsquare_r"/>
+        &lt;!&ndash;후기 수&ndash;&gt;
+        <TextView
+            android:id="@+id/form_search_premium_board_epilogue_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/form_search_premium_board_epilogue_dont_use"
+            app:layout_constraintTop_toTopOf="@id/form_search_premium_board_epilogue_dont_use"
+            app:layout_constraintBottom_toBottomOf="@id/form_search_premium_board_epilogue_dont_use"
+            android:text="10"
+            android:textColor="#303030"
+            android:textSize="14sp"
+            android:fontFamily="@font/nanumsquare_r"/>
+        &lt;!&ndash;)&ndash;&gt;
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/form_search_premium_board_epilogue_num"
+            app:layout_constraintTop_toTopOf="@id/form_search_premium_board_epilogue_dont_use"
+            app:layout_constraintBottom_toBottomOf="@id/form_search_premium_board_epilogue_dont_use"
+            android:text="@string/search_page_epilogue_text_2"
+            android:textColor="#303030"
+            android:textSize="14sp"
+            android:fontFamily="@font/nanumsquare_r"/>-->
+
+
+        <TextView
+            android:id="@+id/form_search_premium_board_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#303030"
+            android:textSize="12sp"
+            android:fontFamily="@font/nanumsquare_r"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/form_search_premium_board_ratingBar"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/form_search_premium_board_location"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/form_search_premium_board_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:fontFamily="@font/nanumsquare_r"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/form_search_premium_board_gongdam_confirmed_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/form_search_premium_board_image"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp">
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:background="@drawable/gongdam_confirmed"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/gongdam_confirmed"
+                android:textColor="#303030"
+                android:textSize="14sp"
+                android:fontFamily="@font/nanumsquare_r"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/form_search_premium_board_cost_per_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#303030"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanumsquare_b"
+            android:text="1,000,000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

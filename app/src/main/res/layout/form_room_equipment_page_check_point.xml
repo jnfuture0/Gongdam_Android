@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="19dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--유의사항-->
+    <TextView
+        android:background="@drawable/style_top_bababa_1dp_solid_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="19dp"
+        android:paddingLeft="10dp"
+        android:text="@string/you_have_to_know"
+        android:textColor="#303030"
+        android:textSize="19.5sp"
+        android:fontFamily="@font/nanumsquare_b"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/used_equip_setting_plz"
+        android:textColor="#303030"
+        android:textSize="12sp"
+        android:fontFamily="@font/nanumsquare_r"/>
+
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/style_bottom_bababa_1dp_solid_transparent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="19dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/form_my_review2_image"
+            android:background="@drawable/test_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/form_my_review2_studio_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A studio"
+            android:textColor="#303030"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanumsquare_b"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/form_my_review2_image"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/form_my_review2_room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나 room"
+            android:textColor="#303030"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanumsquare_r"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/form_my_review2_studio_name"
+            android:layout_marginLeft="5dp"/>
+        <RatingBar
+            android:id="@+id/form_my_review2_ratingbar"
+            app:layout_constraintLeft_toRightOf="@id/form_my_review2_image"
+            app:layout_constraintTop_toBottomOf="@id/form_my_review2_studio_name"
+            android:numStars="5"
+            android:stepSize="0.5"
+            style="@style/customRatingBar"
+            android:isIndicator="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/form_my_review2_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19.08.05"
+            android:textColor="#7e7e7e"
+            android:textSize="12sp"
+            android:fontFamily="@font/nanumsquare_r"
+            app:layout_constraintTop_toBottomOf="@id/form_my_review2_studio_name"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="14dp"/>
+
+        <ImageButton
+            android:id="@+id/form_my_review2_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/three_dots_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/form_my_review2_review_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="너무 친절해요\n조명 어려웠는데..조명 어려웠는데..조명 어려웠는데..조명 어려웠는데..조명 어려웠는데..조명 어려웠는데..조명 어려웠는데.."
+            android:textColor="#303030"
+            android:textSize="12sp"
+            android:fontFamily="@font/nanumsquare_r"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/form_my_review2_image"
+            android:layout_marginTop="9dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/form_my_review2_reply_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/form_my_review2_review_content"
+            android:layout_marginTop="19dp"
+            android:paddingBottom="19dp"
+            android:background="#eeeeee">
+
+            <TextView
+                android:id="@+id/form_my_review2_studio_name_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:text="A studio"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:fontFamily="@font/nanumsquare_b"/>
+            <TextView
+                android:id="@+id/form_my_review2_reply_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="default"
+                android:textColor="#7e7e7e"
+                android:textSize="12.5sp"
+                android:fontFamily="@font/nanumsquare_r"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/form_my_review2_studio_name_reply"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/form_my_review2_reply_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="저희 스튜디오 어쩌구"
+                android:textColor="#7e7e7e"
+                android:textSize="12.5sp"
+                android:fontFamily="@font/nanumsquare_r"
+                app:layout_constraintTop_toBottomOf="@id/form_my_review2_studio_name_reply"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.FragmentCenter2_1by1Question">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#303030"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="33dp"
+                android:fontFamily="@font/nanumsquare_r"
+                android:text="@string/center_page_1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#303030"
+                android:layout_marginTop="13dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/center_plz_mail_us"
+                android:textSize="12sp"
+                android:textColor="#303030"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="33dp"
+                android:fontFamily="@font/nanumsquare_r"/>
+            <!--<EditText
+                android:id="@+id/center2_page_ask_title_ET"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/center_page_2"
+                app:fontFamily="@font/nanumsquare_r"
+                android:textSize="10.5sp"
+                android:textColor="#8d8d8d"
+                android:singleLine="true"
+                android:selectAllOnFocus="true"
+                android:background="@drawable/style_borders_b5b5b5_13"
+                android:paddingLeft="5dp"/>
+
+            <EditText
+                android:id="@+id/center2_page_ask_content_ET"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/center_page_3"
+                app:fontFamily="@font/nanumsquare_r"
+                android:textSize="10.5sp"
+                android:textColor="#8d8d8d"
+                android:selectAllOnFocus="true"
+                android:background="@drawable/style_borders_b5b5b5_13"
+                android:paddingLeft="5dp"/>
+
+            <Button
+                android:id="@+id/center2_page_ask_confirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:text="@string/center_page_4"
+                app:fontFamily="@font/nanumsquare_b"
+                android:textSize="13sp"
+                android:background="@drawable/style_radius5_solid_bfbfbf"
+                style="?android:attr/borderlessButtonStyle"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:textSize="12sp"
+                android:textColor="#303030"
+                android:fontFamily="@font/nanumsquare_r"
+                android:text="@string/center_page_5"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#303030"
+                android:layout_marginTop="13dp"/>-->
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

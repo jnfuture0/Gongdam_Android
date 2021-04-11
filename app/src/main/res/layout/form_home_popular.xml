@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/form_home_popular_layout"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:id="@+id/form_home_popular_image"
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/test_image"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--sale_studio_name-->
+    <TextView
+        android:id="@+id/form_home_popular_studio_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#303030"
+        android:text="A studio"
+        android:fontFamily="@font/nanumgothicextrabold"
+        app:layout_constraintTop_toBottomOf="@id/form_home_popular_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp" />
+    <!--sale_room_name-->
+    <TextView
+        android:id="@+id/form_home_popular_room_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#303030"
+        android:text="A studio"
+        android:fontFamily="@font/nanumsquare_r"
+        app:layout_constraintTop_toBottomOf="@id/form_home_popular_studio_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="2dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
